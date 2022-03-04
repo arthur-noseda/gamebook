@@ -18,18 +18,6 @@
 </script>
 
 <Box title={title}>
-  <div class="initial">Initial {title} = {score.max}</div>
-  <div class="current">{score.current}</div>
+  <div>{score.current} / {score.max}</div>
   <progress max={score.max} value={$progress}>{$progress}</progress>
 </Box>
-
-<style>
-  .initial {
-  	font-size: .8em;
-  }
-
-  .current {
-    font-size: 1.3em;
-    margin-top: 1em;
-  }
-</style>

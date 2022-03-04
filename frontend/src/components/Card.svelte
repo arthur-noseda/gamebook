@@ -8,10 +8,3 @@
 <Box title={title}>
   <div class="value">{value}</div>
 </Box>
-
-<style>
-  .value {
-    font-size: 1.3em;
-    margin: 1em 0 0 0;
-  }
-</style>

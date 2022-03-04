@@ -20,31 +20,25 @@
 	}
 </script>
 
-<div id="entry">
-  <h2>{entryNumber}</h2>
-  <p>{text}</p>
-  {#if monster != null}
-    <MonsterSheet monster={monster} />
-  {/if}
-  {#if encounter != null}
-    <p>Round #{encounter.roundNumber}</p>
-    <p>{encounter.message}</p>
-  {/if}
-  <div class="actions">
-    {#each actions as action}
-      <Button action={action} on:action={dispatchAction} />
-    {/each}
+<section>
+  <div>
+    <h2>{entryNumber}</h2>
+    <p>{text}</p>
+    <div class="actions">
+      {#each actions as action}
+        <Button action={action} on:action={dispatchAction} />
+      {/each}
+    </div>
   </div>
-</div>
-
-<style>
-  #entry {
-    margin: 1em;
-    text-align: center;
-  }
-
-  #entry p {
-    margin: 1em 0;
-    text-align: justify;
-  }
-</style>
+</section>
+{#if monster != null}
+  <MonsterSheet monster={monster} />
+{/if}
+{#if encounter != null}
+  <section>
+    <div>
+      <h2>Round #{encounter.roundNumber}</h2>
+      <p>{encounter.message}</p>
+    </div>
+  </section>
+{/if}

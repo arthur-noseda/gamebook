@@ -13,11 +13,3 @@
 </script>
 
 <button on:click={dispatchAction}>{action.label}</button>
-
-<style>
-  button {
-    font-size: 1.3em;
-    background-color: #BDDC98;
-    text-transform: uppercase;
-  }
-</style>

@@ -7,7 +7,6 @@
 
 <style>
   h3 {
-    font-size: 1.3em;
     font-weight: normal;
     margin: 0 0 1em 0;
   }

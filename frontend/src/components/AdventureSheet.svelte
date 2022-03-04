@@ -7,9 +7,9 @@
   export let hero: Hero;
 </script>
 
-<div id="adventure-sheet">
+<div class="sheet">
   <h2>Adventure Sheet</h2>
-  <div class="container">
+  <div class="sheet-container">
     <div class="item-sm">
       <Score title=Skill score={hero.skill} />
     </div>
@@ -27,32 +27,3 @@
     </div>
   </div>
 </div>
-
-<style>
-  #adventure-sheet {
-    background: #F7EAD9;
-    font-family: Roboto;
-    padding: .5em;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .container > * {
-    border: 1px solid black;
-    margin: .5em;
-    padding: 1em;
-  }
-
-  .item-sm {
-    flex: 1 1 12em;
-  }
-
-  .item-lg {
-    flex: 2 2 18em;
-  }
-</style>

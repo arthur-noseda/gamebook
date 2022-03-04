@@ -37,7 +37,7 @@ public class AdventureController {
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaTypes.HAL_FORMS_JSON_VALUE)
     @ResponseBody
-    public EntityModel<AdventureRepresentation> act(@RequestBody Action action) {
+    public EntityModel<AdventureRepresentation> act(@RequestBody ActionRepresentation action) {
         adventure.getActions().stream()
                 .filter(a -> a.hashCode() == action.getHash())
                 .findFirst()

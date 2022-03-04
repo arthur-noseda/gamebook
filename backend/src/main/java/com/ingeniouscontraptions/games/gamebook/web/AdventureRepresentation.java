@@ -35,10 +35,10 @@ public class AdventureRepresentation {
         return adventure.getEncounter();
     }
 
-    public List<Action> getActions() {
+    public List<ActionRepresentation> getActions() {
         return adventure.getActions().stream()
                 .filter(a -> a.isAllowed(adventure))
-                .map(a -> new Action(a.getClass().getSimpleName(), a.hashCode()))
+                .map(ActionRepresentation::new)
                 .collect(Collectors.toList());
     }
 
